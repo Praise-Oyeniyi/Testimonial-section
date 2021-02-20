@@ -1,0 +1,124 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Barlow Semi Condensed' Arial, Helvetica, sans-serif;
+    width:100%;
+    font-size: 13px;
+    background: hsl(210, 46%, 95%);
+}
+section{
+    width:80%;
+    margin:5% auto;
+}
+.item1{
+    grid-area: daniel;
+    background:url('images/bg-pattern-quotation.svg') top right hsl(263, 55%, 52%);
+    background-repeat: no-repeat;
+}
+.item2{
+    grid-area: jonathan;
+    background: hsl(217, 19%, 35%);
+}
+.item3{
+    grid-area:kira;
+    background: hsl(0, 0%, 100%);
+}
+.item4{
+    grid-area:jeanette ;
+    background: hsl(0, 0%, 100%);
+}
+
+.item5{
+    grid-area:patrick;
+    background: hsl(219, 29%, 14%);
+}
+.item1 h3, .item2 h3, .item5 h3{
+    color:hsl(0, 0%, 100%);
+}
+.item1 h4, .item2 h4, .item5 h4{
+    color:hsl(0, 0%, 81%);
+}
+.item1 .testimony-body, .item2 .testimony-body, .item5 .testimony-body{
+    color:hsl(0, 0%, 70%);
+}
+.item3 h4, .item4 h4{
+    color:hsl(217, 19%, 14%);   
+}
+.item3 .testimony-body, .item4 .testimony-body{
+    color:hsl(217, 19%, 35%);
+}
+.testimony-body, .level{
+    font-size: 12px;
+}
+.level{
+    color:hsl(0, 0%, 60%);
+}
+
+.grid-container{
+    width:100%;
+    display:grid;
+    grid-gap:20px;
+    grid-template-areas: 
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.items{
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    padding:25px 30px;
+    justify-content: center;
+}
+.item-top{
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+    grid-gap:20px;
+    padding:10px;
+}
+.profile-image{
+    border-radius:50%;
+    height:50px;
+    width:50px;
+}
+.testimony-title{
+    padding-bottom:8px;
+}
+.testimony-body{
+    padding-top:7px;
+}
+
+
+@media(max-width: 500px){
+    section{
+        width:90%;
+        margin:8% auto;
+    }
+    .items{
+        padding:30px 30px;
+        align-items:start;
+    }
+    .item-top{
+        justify-content: space-between;
+        width:65%;
+    }
+    .grid-container{
+        grid-gap:25px;
+        grid-template-areas: 
+        'daniel'
+        'daniel' 
+        'jonathan' 
+        'jeanette' 
+        'patrick'
+        'kira'
+        'kira';
+        grid-template-columns: 1fr;
+        grid-template-rows:200px 200px 220px 200px 290px 200px 200px;
+
+    }
+}
