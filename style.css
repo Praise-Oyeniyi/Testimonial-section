@@ -105,7 +105,7 @@ section{
     }
     .item-top{
         justify-content: space-between;
-        width:65%;
+        width:70%;
     }
     .grid-container{
         grid-gap:25px;
@@ -118,7 +118,7 @@ section{
         'kira'
         'kira';
         grid-template-columns: 1fr;
-        grid-template-rows:200px 200px 220px 200px 305px 200px 200px;
+        grid-template-rows:200px 200px 220px 200px 315px 200px 200px;
 
     }
 }
